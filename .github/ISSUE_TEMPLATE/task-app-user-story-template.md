@@ -1,5 +1,5 @@
 ---
-name: User story template
+name: Task app User story template
 about: Custom template for projects user stories
 title: ''
 labels: ''
