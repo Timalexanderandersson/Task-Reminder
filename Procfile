@@ -1,1 +1,1 @@
-Procfile: web: task_reminder.wsgi
+Procfile: web: gunicorn task_reminder.wsgi
