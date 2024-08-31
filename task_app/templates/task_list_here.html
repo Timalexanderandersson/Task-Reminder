@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Views</title>
+</head>
+
+<body>
+
+    <h1>User task title</h1>
+    {% for users in user %}
+    <h2>{{ users.title }}</h2>
+    <h3>{{ users.name }}</h3>
+    {% endfor %}
+
+    <h1>All tasks here</h1>
+    {% for tasks in user_task %}
+    <h2>{{ tasks.title }}</h2>
+    <p>{{ tasks.task_list }}</p>
+    <p>{{ tasks.description }}</p>
+    <p>{{ tasks.due_date }}</p>
+    {% endfor %}
+
+    <h1>All tasks comments</h1>
+    {% for comment in task_comment %}
+    <h2>{{ comment.title }}</h2>
+    <p>{{ comment.task_list }}</p>
+    <p>{{ comment.task_content }}</p>
+    <p>{{ comment.created_at }}</p>
+    {% endfor %}
+
+
+</body>
+
+</html>
