@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import UserTask
 
-# Create your views here.
-def helloworld(request):
-    return HttpResponse("First django project!")
+class TaskListAll(generic.ListView):
+    queryset = UserTask.objects.all()
+    template_name = "task_list_here.html"
