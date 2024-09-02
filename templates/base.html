@@ -18,22 +18,25 @@
 
 <body>
   <!-- Header -->
-  <header>
+  <header class="header-bar">
     <!-- Nav button -->
-     <div class="header-bar text-center">
+     <div>
       <h1>Task Reminder</h1>
     </div>
+
   </header>
 
   <!-- Main Content -->
   <main>
-    {% block content %}
+    <div>
+      {% block content %}
     <!-- Content -->
     {% endblock %}
+    </div>
   </main>
 <!-- Footer -->
   <footer class="color-footer" >
-    <div>
+    <div class="div-footer">
       <p>&copy; Task Reminder</p>
     </div>
   </footer>
