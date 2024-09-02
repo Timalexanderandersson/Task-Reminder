@@ -1,12 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+}
 
+/*Header*/
 
-/*Navbar and footer color*/
-.navbars-color{
+.header-bar{
     background-color: #4b4e6d;
+    display: block;
+    align-items: center;
 }
 
 /*Main*/
 
 .cool-color-here{
-    background-color: white;
+    background-color: #a5a6b9;
+
+}
+
+/*Footer*/
+.color-footer{
+    background-color: #4b4e6d;
 }

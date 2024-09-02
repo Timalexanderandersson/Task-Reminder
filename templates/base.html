@@ -4,28 +4,42 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS stylesheet-->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!--- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Task Reminder</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS stylesheet-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!--- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Task Reminder</title>
 </head>
+
 <body>
-    <header class="navbars-color">
-      <h1>Everything in the nav</h1>
-     
-    </header>
-    <main class="cool-color-here">
-        {% block content %}
-        <!-- content -->
-        {% endblock %}
-    </main>
-    <footer class="navbars-color">
-<h2>footer here</h2>
+  <!-- Header -->
+  <header class="header-bar">
+    <!-- Nav button -->
+     <div>
+      <h1>Task Reminder</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    {% block content %}
+    <!-- Content -->
+    {% endblock %}
+  </main>
+<!-- Footer -->
+  <footer class="color-footer" >
+    <div>
+      <p>&copy; Task Reminder</p>
+    </div>
   </footer>
-    
+
+  <!--Font Awesome -->
+  <script src="https://kit.fontawesome.com/482a5ab2aa.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

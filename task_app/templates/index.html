@@ -4,7 +4,7 @@
 
 {% block content%}
    
-
+<div class="cool-color-here container-fluid" >
     <h1>User task title</h1>
     {% for users in user %}
     <h2>{{ users.title }}</h2>
@@ -26,5 +26,7 @@
     <p>{{ comment.task_content }}</p>
     <p>{{ comment.created_at }}</p>
     {% endfor %}
+
+</div>
 
     {% endblock %}
