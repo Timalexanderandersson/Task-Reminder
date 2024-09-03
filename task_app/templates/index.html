@@ -3,25 +3,12 @@
 {% load static %}
 
 {% block content%}
-   
-<div class="cool-color-here" >
-    <div class="container-task">
-        <h1>User task title</h1>
-    {% for users in user %}
-    <h2>{{ users.title }}</h2>
-    <h3>{{ users.name }}</h3>
-    {% endfor %}
 
-    <h1>All tasks here</h1>
-    {% for tasks in user_task %}
-    <h2>{{ tasks.title }}</h2>
-    <p>{{ tasks.task_list }}</p>
-    <p>{{ tasks.description }}</p>
-    <p>{{ tasks.due_date }}</p>
-    {% endfor %}
+
+<div class="container-task">
+    <div class="cool-color-here">
 
     </div>
-    
 </div>
 
-    {% endblock %}
+{% endblock %}
