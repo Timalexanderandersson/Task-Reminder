@@ -19,32 +19,28 @@
 <body>
   <!-- Header -->
   <header class="header-bar">
-    <!-- Nav button -->
+    <!-- Nav button and title -->
     <div class="col no-display-block"></div>
     <div class="text-center next-screen">
-      <h1 id="title-task">Task Reminder</h1>
+      <h1 id="title-task"><a class="title-link" href="{% url 'Homepage' %}">Task Reminder</a></h1>
       <div class="bigger-nav">
-        <a class="button-big" href="#">Home</a>
+        <a class="button-big" href="{% url 'Homepage' %}">Home</a>
         <a class="button-big" href="#">Sign up</a>
         <a class="button-big" href="#">Login</a>
       </div>
-
-
     </div>
     <div class="dropdown col button-nav-div no-nav-bar">
       <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fa-solid fa-arrow-down-short-wide color-hover"></i>
       </a>
-
+      <!-- Navbar after 400px -->
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Home</a></li>
+        <li><a class="dropdown-item" href="{% url 'Homepage' %}">Home</a></li>
         <li><a class="dropdown-item" href="#">Sign up</a></li>
         <li><a class="dropdown-item" href="#">Login</a></li>
       </ul>
     </div>
-
   </header>
-
   <!-- Main Content -->
   <main>
     <div>
@@ -59,8 +55,7 @@
       <p>&copy; Task Reminder</p>
     </div>
   </footer>
-
-  <!-- Javascript -->
+  <!-- Javascript, bootstrap Javascript -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
   </script>
@@ -68,7 +63,6 @@
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
   </script>
   <script src="{% static 'js/script.js' %}"></script>
-
   <!--Font Awesome -->
   <script src="https://kit.fontawesome.com/482a5ab2aa.js" crossorigin="anonymous"></script>
 </body>

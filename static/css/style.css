@@ -1,3 +1,4 @@
+/* Reseting all margins,padding. and border-box on box-sizing */
 *{
     margin:0;
     padding:0;
@@ -23,10 +24,14 @@ body{
     box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
     position: relative;
 }
+/*Title h1*/
+.title-link{
+    text-decoration: none;
+    color: black;
+}
 /*navbar for big screens*/
 .bigger-nav{
     display: none;
-
 }
 /*Navbar button*/
 .button-nav-div{
@@ -35,19 +40,16 @@ body{
     padding-left: 30px;
     padding-top: 5px;
 }
-.color-hover{
-  color: white;
-}
 .color-hover:active{
     color: rgb(209, 114, 114);
-  }
+}
 
 /*Main*/
 main{
     flex-grow: 1;
     
-    
 }
+/*Index.html page*/
 .cool-color-here{
     background-color: #fceeee;
     display: flex;
@@ -60,7 +62,6 @@ main{
     height: 100%;
     border-color: black;
     border:2px solid;
-    
 }
 
 /*Footer*/
@@ -80,6 +81,7 @@ main{
     box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
     position:relative;
 }
+
 /*Media queries for 400px*/
 @media screen and (min-width: 400px){
 
@@ -95,6 +97,7 @@ main{
     display: flex;
     margin-left: 15px;
     align-items: center;
+   
 }
 .button-big{
     padding-left: 6px;
@@ -119,46 +122,57 @@ main{
 
 /*Media queries for 600px*/
 @media screen and (min-width: 600px){
+/*links in nav*/
 .bigger-nav{
-
-    margin-left: 25px;
-    
+    margin-left: 10px;
+    width: 20vh; 
 }
 .button-big{
-    padding-left: 15px;
-    font-size: 1.1rem;
+    padding-left: 5px;
+    font-size: 1.0rem;
     
 }
 #title-task {
     font-size: 2.5rem;
+    width: 50vh;
+    display: flex;
+    justify-content: right;
 }
 
 }
 
 /*Media queries for 768px*/
 @media screen and (min-width: 768px){
-
-    .bigger-nav{
-
-        margin-left: 25px;
+/*Links in nav*/
+.bigger-nav{
+    margin-left: 25px;
+}
+.button-big{
+    padding-left: 10px;
+    font-size: 1.1rem;
         
-    }
-    .button-big{
-        padding-left: 15px;
-        font-size: 1.2rem;
-        
-    }
-    #title-task {
-        font-size: 2.6rem;
-    }
-    .no-display-block{
-        display: flex;
-    }   
-    
+}
+#title-task{
+    font-size: 2.6rem;
+    width: 50vh;
+}
 }
 
 /*Media queries for 992px*/
 @media screen and (min-width: 992px){
+#title-task {
+    font-size: 2.9rem;
+    width: 59vh;
+}
 
-    
+.button-big{
+    padding-left: 10px;
+    font-size: 1.3rem;
+        
+}
+.bigger-nav{
+    margin-left: 25px;
+    width: 25vh;
+}
+ 
 }
