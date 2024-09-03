@@ -15,31 +15,59 @@ body{
 
 /*Header*/
 .header-bar{
-    background-color: #4b4e6d;
-    height: 13vh;
+    background-color: #db504a;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
+/*navbar for big screens*/
+.bigger-nav{
+    display: none;
+
+}
+/*Navbar button*/
+.button-nav-div{
+    height: 50px;
+    font-size: 25px;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+.color-hover{
+  color: white;
+}
+.color-hover:active{
+    color: rgb(209, 114, 114);
+  }
 
 /*Main*/
 main{
     flex-grow: 1;
+    
+    
 }
 .cool-color-here{
-    background-color: #a5a6b9;
+    background-color: #fceeee;
     display: flex;
     padding: 40px;
     justify-content: center;
-
+    
+}
+.container-task{
+    width: 70vh;
+    height: 100%;
+    border-color: black;
+    border:2px solid;
+    
 }
 
 /*Footer*/
 .color-footer{
-    background-color: #4b4e6d;
+    background-color: #db504a;
     height: 8vh;
-    
-    
+    width: 100%;
     
 }
 .div-footer{
@@ -48,4 +76,89 @@ main{
     align-items: center;
     padding-top: 20px;
     font-size: 1.3rem;
+    height: 8vh;
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+    position:relative;
+}
+/*Media queries for 400px*/
+@media screen and (min-width: 400px){
+
+.no-display-block{
+    display: none;
+} 
+
+.no-nav-bar{
+    display: none;
+}
+
+.bigger-nav{
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+}
+.button-big{
+    padding-left: 6px;
+    color: white;
+    text-decoration: none;
+}
+.button-big:hover{
+    color: white;
+}
+.button-big:active{
+      color: rgb(209, 114, 114);
+}
+.next-screen{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+}
+
+/*Media queries for 600px*/
+@media screen and (min-width: 600px){
+.bigger-nav{
+
+    margin-left: 25px;
+    
+}
+.button-big{
+    padding-left: 15px;
+    font-size: 1.1rem;
+    
+}
+#title-task {
+    font-size: 2.5rem;
+}
+
+}
+
+/*Media queries for 768px*/
+@media screen and (min-width: 768px){
+
+    .bigger-nav{
+
+        margin-left: 25px;
+        
+    }
+    .button-big{
+        padding-left: 15px;
+        font-size: 1.2rem;
+        
+    }
+    #title-task {
+        font-size: 2.6rem;
+    }
+    .no-display-block{
+        display: flex;
+    }   
+    
+}
+
+/*Media queries for 992px*/
+@media screen and (min-width: 992px){
+
+    
 }
