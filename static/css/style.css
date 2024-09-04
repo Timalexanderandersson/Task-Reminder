@@ -4,7 +4,6 @@
     padding:0;
     box-sizing: border-box;
 }
-
 /*Body*/
 body{
     display: flex;
@@ -13,8 +12,6 @@ body{
     position:relative;
    
 }
-
-
 /*Header*/
 .header-bar{
     background-color: #db504a;
@@ -65,7 +62,7 @@ main{
     height: auto;
     width: 80%;
     border-radius: 8px;
-    margin-bottom: 50vh;
+    margin-bottom: 40vh;
    
 }
 .cool-color-here{
@@ -73,6 +70,28 @@ main{
     height: 40px;
     background-color: #db504a;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    margin-top: 10vh;
+}
+/*Task h2*/
+#task-add{
+    padding-right: 3vh;
+}
+.penn-icon{
+    font-size: 1.5rem;
+}
+.task-add-box{
+    width: 100%;
+    border: 0.5px solid #b87b79;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+
 }
 
 /*Footer*/

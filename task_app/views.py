@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import UserTask, Taskmodel, Taskcomment
-
+from .forms import PostForm
+ 
 
 def Userforviews(request):
     user = Taskmodel.objects.all()

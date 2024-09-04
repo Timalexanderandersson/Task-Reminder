@@ -1,14 +1,18 @@
 {% extends "base.html" %}
-
-{% load static %}
-
-{% block content%}
-
-
+{% load crispy_forms_tags %}
+{% block content %}
 <div class="container-task">
     <div class="cool-color-here">
-
+        <h2 id="task-add">Add your task</h2>
+        <i class="fa-solid fa-pen-fancy penn-icon"></i>
+    </div>
+    <div class="task-add-box">
+        <div>
+            <h2>Make a task</h2>
+            {% csrf_token %}
+    
+            {{ form | crispy }}    
+        </div>
     </div>
 </div>
-
 {% endblock %}

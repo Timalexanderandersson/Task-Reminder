@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% url 'Homepage' as Homepage_url %}
 
@@ -43,9 +44,9 @@
   </header>
   <!-- Main Content -->
   <main>
-      {% block content %}
-      <!-- Content -->
-      {% endblock %}
+    {% block content %}
+    <!-- Content -->
+    {% endblock %}
   </main>
   <!-- Footer -->
   <footer class="color-footer">
