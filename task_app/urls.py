@@ -2,7 +2,6 @@ from . import views
 from django.urls import path
  
 urlpatterns = [
-    path('', views.Userforviews, name='Homepage'),
-    path('task/', views.PostForm, name='postform'),
     
+    path('', views.taskpush, name='Homepage'),
 ]

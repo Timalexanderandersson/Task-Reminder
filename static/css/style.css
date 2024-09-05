@@ -94,6 +94,10 @@ main{
 
 }
 
+.form-task-edit{
+    width: auto;
+}
+
 /*Footer*/
 .color-footer{
     background-color: #db504a;

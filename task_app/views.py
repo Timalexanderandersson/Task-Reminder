@@ -1,15 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import UserTask, Taskmodel, Taskcomment
 from .forms import PostForm
- 
 
-def Userforviews(request):
-    user = Taskmodel.objects.all()
-    user_task = UserTask.objects.all()
-    task_comment = Taskcomment.objects.all()
-
+def taskpush(request):
+    user_task = UserTask.objects.all().order_by('-created_at')
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('Homepage')
+    else:
+        form = PostForm()
     return render(request, 'index.html', {
-        'user': user,
-        'user_task': user_task,
-        'task_comment': task_comment,
+        'form': form,
+        'user_task' :user_task,
         })
+

@@ -17,7 +17,7 @@ class UserTask(models.Model):
         Taskmodel, on_delete=models.CASCADE, related_name="listofall")
     description = models.TextField(blank=True, null=True)
     completed = models.BooleanField(default=False)
-    due_date = models.DateTimeField(blank=True, null=True)  
+    due_date = models.DateTimeField(blank=True, null=True) 
 
     def __str__(self):
         return self.title
