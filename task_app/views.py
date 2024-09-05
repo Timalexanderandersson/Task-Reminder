@@ -3,7 +3,7 @@ from .models import UserTask, Taskmodel, Taskcomment
 from .forms import PostForm
 
 def taskpush(request):
-    user_task = UserTask.objects.all().order_by('-created_at')
+    user_task = Taskmodel.objects.all()
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
