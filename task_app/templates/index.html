@@ -4,10 +4,16 @@
 <div class="container-task">
     <div class="cool-color-here">
         <h2 id="task-add">Add your task</h2>
-        <button id="add-your-task">Add</button>
+        <button class="addbutton">Add</button>
         <i class="fa-solid fa-pen-fancy penn-icon"></i>
     </div>
     <div class="task-add-box">
+        <form method="post" class="formdetails">
+            {% csrf_token %}
+            
+            {{ form | crispy }}
+           
+        </form>
    
     </div>
 </div>

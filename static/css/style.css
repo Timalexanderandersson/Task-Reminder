@@ -97,6 +97,9 @@ main{
 .form-task-edit{
     width: auto;
 }
+.formdetails{
+    display: none;
+}
 
 /*Footer*/
 .color-footer{
