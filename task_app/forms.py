@@ -6,10 +6,24 @@ from crispy_forms.layout import Layout, Submit
 class PostForm(forms.ModelForm):
     class Meta:
         model = Taskmodel
-        fields = ['user', 'name',]
-    
+        fields = ['user', 'name',]  
+
     def __init__(self, *args, **kwargs):
         super(PostForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
-        self.helper.form_method = 'post'
+        self.helper.form_method = 'post'  
+
+class PostUser(forms.ModelForm):
+    class Meta:
+        model = UserTask
+        fields = ['title','task_list','description','completed','due_date']
+
+    def __init__(self, *args, **kwargs):
+        super(PostUser, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_method = 'post' 
+
+
+
+
         

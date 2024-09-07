@@ -62,7 +62,7 @@ main{
     height: auto;
     width: 80%;
     border-radius: 8px;
-    margin-bottom: 40vh;
+    margin-bottom: 30vh;
    
 }
 .cool-color-here{
@@ -78,7 +78,7 @@ main{
 }
 /*Task h2*/
 #task-add{
-    padding-right: 3vh;
+    padding-right: 2vh;
 }
 .penn-icon{
     font-size: 1.5rem;
@@ -89,9 +89,16 @@ main{
     height: auto;
     border-radius: 8px;
     margin-top: 4px;
-    display: flex;
-    flex-direction: row;
 
+}
+/*Addbutton*/
+.addbutton{
+    border-radius: 5px;
+    padding: 3px;
+    border-style: none;
+    margin-right: 4px;
+    background-color: rgb(42, 156, 42);
+    
 }
 
 .form-task-edit{
@@ -99,7 +106,50 @@ main{
 }
 .formdetails{
     display: none;
+    width: 80%;
 }
+/*Add button inside the task creater*/
+#first-button{
+    border-style: none;
+    margin-right: 4px;
+    background-color: rgb(42, 156, 42);
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+/*New task created*/
+.for-each-task{
+    height: auto;
+    width: 80%;
+}
+.tasks-header{
+    height: auto;
+    width: auto;
+    background-color: #db504a;
+    border-radius: 8px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    
+}
+/*Task buttons for every task*/
+.task-buttons{
+    padding: 3px;
+    margin: 5px 5px;
+    border-radius: 5px;
+    padding: 3px;
+    border-style: none;
+    background-color: rgb(42, 156, 42);
+
+}
+
+/*form for task*/
+.task-details{
+    display: none;
+    width: 80%;
+}
+
+
 
 /*Footer*/
 .color-footer{

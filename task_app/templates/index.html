@@ -3,19 +3,37 @@
 {% block content %}
 <div class="container-task">
     <div class="cool-color-here">
-        <h2 id="task-add">Add your task</h2>
+        <h2 id="task-add">Create task list</h2>
         <button class="addbutton">Add</button>
         <i class="fa-solid fa-pen-fancy penn-icon"></i>
     </div>
     <div class="task-add-box">
-        <form method="post" class="formdetails">
+        <form method="post" class="formdetails" >
             {% csrf_token %}
-            
             {{ form | crispy }}
-           
+            <button type="submit" id="first-button">Add task</button>
+
         </form>
-   
+        <div>
+        </div>
     </div>
 </div>
 
+<div class="for-each-task">
+    
+    {% for tasks in models_task %}
+    <div class="tasks-header">
+        <h2>{{ tasks.name}}</h2>
+        
+        <button class="task-buttons">Add</button>
+    </div>
+    <div class="task-details">
+        <form method="post">
+            
+        </form>
+
+       <p>hello</p>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
