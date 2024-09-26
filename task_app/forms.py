@@ -7,4 +7,4 @@ from .models import TaskUser
 class PostUser(forms.ModelForm):
     class Meta:
         model = TaskUser
-        fields = ['title']
+        fields = ['title','description','completed','due_date','time_date']
