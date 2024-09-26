@@ -5,5 +5,4 @@ urlpatterns = [
     path('', views.homepage, name='Homepage'),
     path('tasks', views.taskpush, name='task-create'),
     
-
 ]

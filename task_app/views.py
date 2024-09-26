@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import UserTask
+from .models import TaskUser
 from .forms import PostUser
 from django.contrib import messages
 
@@ -11,7 +11,7 @@ def homepage(request):
 
 # Views for adding to the task list.
 def taskpush(request):
-    allinfo = UserTask.objects.filter()
+    allinfo = TaskUser.objects.filter()
     if request.method == 'POST':
         form = PostUser(request.POST)
         form_user = PostUser(request.POST)

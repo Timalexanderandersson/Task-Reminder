@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import UserTask
+from .models import TaskUser
 
-#Admin for task.
-admin.site.register(UserTask)
-
-
+ 
+admin.site.register(TaskUser)
