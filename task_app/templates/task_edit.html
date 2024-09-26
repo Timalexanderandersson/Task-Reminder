@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-task">
+            <h2 class="text-center">{{ show_title.name }}</h2>
+    <div class="cool-color-here">
+        <h2 id="task-add">Add tasks</h2>
+        <button class="addbutton">Add</button>
+        <i class="fa-solid fa-pen-fancy penn-icon"></i>
+    </div>
+    <div class="task-add-box">
+        <form method="post" class="formdetails" action="{% url 'newpage' show_title.id %}" >
+            {{ form_user|crispy }}
+            {% csrf_token %}
+            <button type="submit" id="first-button">Add task</button>
+        </form>
+        <div>
+        </div>
+    </div>
+</div>
+<!-- task list  -->
+<div class="for-each-task">
+    
+    <div class="tasks-in-task text-center">
+        <form">
+            <h2>{{ show_task.title }}</h2>
+            <button class="task-buttons">Open</button>
+        </form> 
+    </div>
+    <div class="task-details">
+        <p>{{ tasks.description }}</p>
+        <p>{{ tasks.due_date }}</p>
+    </div>
+   
+</div>
+{% endblock %}
+

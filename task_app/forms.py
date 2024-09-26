@@ -16,7 +16,7 @@ class PostForm(forms.ModelForm):
 class PostUser(forms.ModelForm):
     class Meta:
         model = UserTask
-        fields = ['title','task_list','description','completed','due_date']
+        fields = ['title','description','completed','task_list','due_date']
 
     def __init__(self, *args, **kwargs):
         super(PostUser, self).__init__(*args, **kwargs)

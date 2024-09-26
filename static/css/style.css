@@ -62,7 +62,7 @@ main{
     height: auto;
     width: 80%;
     border-radius: 8px;
-    margin-bottom: 30vh;
+    margin-bottom: 20vh;
    
 }
 .cool-color-here{
@@ -79,6 +79,7 @@ main{
 /*Task h2*/
 #task-add{
     padding-right: 2vh;
+    font-size: 1rem;
 }
 .penn-icon{
     font-size: 1.5rem;
@@ -120,17 +121,28 @@ main{
 /*New task created*/
 .for-each-task{
     height: auto;
-    width: 80%;
+    width: 90%;
 }
 .tasks-header{
     height: auto;
     width: auto;
     background-color: #db504a;
     border-radius: 8px;
-    padding: 2px;
+    padding: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+/*link to tasks*/
+.link-header{
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-right: 10vh;
     
+}
+.link-header:hover{
+    color: white;
 }
 /*Task buttons for every task*/
 .task-buttons{
@@ -142,6 +154,22 @@ main{
     background-color: rgb(42, 156, 42);
 
 }
+/*Delete button for task list*/
+.delete-button-task{
+    padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(201, 159, 159);
+    margin-left:20px;
+    align-self: flex-end;
+}
+
+/*form index*/
+.form-edit{
+    display: flex;
+    justify-content: end;
+}
 
 /*form for task*/
 .task-details{
@@ -149,7 +177,12 @@ main{
     width: 80%;
 }
 
-
+/*New page task_edit*/
+.tasks-in-task{
+    background-color: #db504a;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
 
 /*Footer*/
 .color-footer{
