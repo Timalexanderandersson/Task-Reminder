@@ -1,8 +1,7 @@
 from django.contrib import admin
-from .models import Taskmodel, UserTask, Taskcomment
+from .models import UserTask
 
-# 
-admin.site.register(Taskmodel)
+#Admin for task.
 admin.site.register(UserTask)
-admin.site.register(Taskcomment)
+
 
