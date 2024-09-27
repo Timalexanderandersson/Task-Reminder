@@ -10,7 +10,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 #Takes user/visitor to the front page.
 def homepage(request):
 
-    return render(request, 'task_edit.html',)
+    return render(request, 'index.html',)
 
 
 # Adding to the task list as user.
