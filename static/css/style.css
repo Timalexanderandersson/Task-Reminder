@@ -62,7 +62,7 @@ main{
     height: auto;
     width: 80%;
     border-radius: 8px;
-    margin-bottom: 20vh;
+    margin-bottom: 18vh;
    
 }
 .cool-color-here{
@@ -79,7 +79,6 @@ main{
 /*Task h2*/
 #task-add{
     padding-right: 2vh;
-    font-size: 1rem;
 }
 .penn-icon{
     font-size: 1.5rem;

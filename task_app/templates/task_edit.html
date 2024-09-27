@@ -1,37 +1,43 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
 {% block content %}
+
+<!--Dropdown to show the form-->
 <div class="container-task">
-            <h2 class="text-center">{{ show_title.name }}</h2>
     <div class="cool-color-here">
-        <h2 id="task-add">Add tasks</h2>
+        <h2 id="task-add">Create task</h2>
         <button class="addbutton">Add</button>
         <i class="fa-solid fa-pen-fancy penn-icon"></i>
     </div>
     <div class="task-add-box">
-        <form method="post" class="formdetails" action="{% url 'newpage' show_title.id %}" >
-            {{ form_user|crispy }}
+        <form method="post" class="formdetails text-center">
             {% csrf_token %}
+            {{ form.as_p }}
             <button type="submit" id="first-button">Add task</button>
         </form>
-        <div>
-        </div>
     </div>
 </div>
-<!-- task list  -->
-<div class="for-each-task">
-    
-    <div class="tasks-in-task text-center">
-        <form">
-            <h2>{{ show_task.title }}</h2>
-            <button class="task-buttons">Open</button>
-        </form> 
+<!--Showing the task-->
+<div class="for-each-task mb-3">
+    {% for task in allinfo %}
+    <div class="tasks-header mb-3 {% if task.completed %}new-header{% endif %}">
+        <h2>{{ task.title }}</h2>
+        <button class="task-buttons">open</button>
     </div>
     <div class="task-details">
-        <p>{{ tasks.description }}</p>
-        <p>{{ tasks.due_date }}</p>
+        <p><strong>To Do: </strong>{{ task.description }}</p>
+        <p> <strong>Before: </strong>{{ task.due_date| date:'Y-m-d' }} <strong>At </strong> {{ task.time_date }}</p>
+        <div class="d-flex mb-2">
+            <form method="get" action="" class="me-2">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            <form method="get" action="">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success">Edit</button>
+            </form>
+        </div>
     </div>
-   
+    {% empty %}
+    {% endfor %}
 </div>
 {% endblock %}
-
