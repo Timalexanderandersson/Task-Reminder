@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import DeleteView, UpdateView
 from .models import TaskUser
-from .forms import PostUser
+from .forms import PostUser, SigningUp
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -15,7 +15,7 @@ def homepage(request):
 
 # Adding to the task list as user.
 def taskpush(request):
-    allinfo = TaskUser.objects.filter()
+    allinfo = TaskUser.objects.filter(user=request.user).order_by('-created_at')
     if request.method == 'POST':
             form = PostUser(request.POST)
             if form.is_valid():
@@ -23,7 +23,7 @@ def taskpush(request):
                tasks.user = request.user
                tasks.save()
                messages.success(request, f'You added a task.')
-               return redirect('task_create')
+               return redirect('task-create')
             else:
                 messages.error(request, 'Did not fill in all.')
     else:
@@ -49,3 +49,20 @@ class UpdateTask(LoginRequiredMixin,SuccessMessageMixin,UpdateView):
     context_object_name = 'tasks'
     success_message = 'Updated task'
     success_url = reverse_lazy('task-create')
+
+
+def signing_up(request):
+    if request.method == 'GET':
+        form = SigningUp()
+        return render(request, 'register.html',{'form':form})
+    if request.method == 'POST':
+        form = SigningUp(request.POST)
+        if form.is_valid():
+            user = form.save()
+            user.username = user.username.lower()
+            user.save()
+            message.success(request, f'Welcome {user.username} to your account!')
+            return redirect('task-create')
+        else:
+            form = SigningUp()
+    return render(request, 'register.html',{'form':form})
