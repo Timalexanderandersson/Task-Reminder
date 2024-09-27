@@ -1,0 +1,308 @@
+/* Reseting all margins,padding. and border-box on box-sizing */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*Body*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position:relative;
+   
+}
+/*Header*/
+.header-bar{
+    background-color: #db504a;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+/*Title h1*/
+.title-link{
+    text-decoration: none;
+    color: black;
+}
+/*navbar for big screens*/
+.bigger-nav{
+    display: none;
+}
+/*Navbar button*/
+.button-nav-div{
+    height: 50px;
+    font-size: 25px;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+.color-hover{
+    color: white;
+}
+.color-hover:active{
+    color: rgb(209, 114, 114);
+}
+
+/*Main*/
+main{
+    flex-grow: 1;
+    background-color: #fceeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+/*textarea*/
+textarea {
+    width:35vh;
+}
+
+/*Index.html page*/
+.container-task{
+    height: auto;
+    width: 80%;
+    border-radius: 8px;
+    margin-bottom: 18vh;
+   
+}
+.cool-color-here{
+    width: 100%;
+    height: 40px;
+    background-color: #db504a;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    margin-top: 10vh;
+}
+/*Task h2*/
+#task-add{
+    padding-right: 2vh;
+    font-size: 1.2rem;
+}
+.penn-icon{
+    font-size: 1.5rem;
+}
+.task-add-box{
+    width: 100%;
+    border: 0.5px solid #b87b79;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 4px;
+
+}
+/*Addbutton*/
+.addbutton{
+    border-radius: 5px;
+    padding: 3px;
+    border-style: none;
+    margin-right: 4px;
+    background-color: rgb(42, 156, 42);
+    
+}
+
+.form-task-edit{
+    width: auto;
+}
+.formdetails{
+    display: none;
+    width: 80%;
+}
+/*Add button inside the task creater*/
+#first-button{
+    border-style: none;
+    margin-right: 4px;
+    background-color: rgb(42, 156, 42);
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+/*New task created*/
+.for-each-task{
+    height: auto;
+    width: 90%;
+}
+.tasks-header{
+    height: auto;
+    width: auto;
+    background-color: #db504a;
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+/*Change color when completed with task*/
+.new-header{
+    background-color: rgb(137, 170, 137);
+}
+/*Color for all Links*/
+.links-for-all{
+    color: #db504a;
+    text-decoration: none;
+}
+/*link to tasks*/
+.link-header{
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-right: 10vh;
+}
+.link-header:hover{
+    color: white;
+}
+/*Task buttons for every task*/
+.task-buttons{
+    padding: 3px;
+    margin: 5px 5px;
+    border-radius: 5px;
+    padding: 3px;
+    border-style: none;
+    background-color: rgb(42, 156, 42);
+
+}
+/*Delete button for task list*/
+.delete-button-task{
+    padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(201, 159, 159);
+    margin-left:20px;
+    align-self: flex-end;
+}
+
+/*form index*/
+.form-edit{
+    display: flex;
+    justify-content: end;
+}
+
+/*form for task*/
+.task-details{
+    display: none;
+    width: 80%;
+}
+
+/*New page task_edit*/
+.tasks-in-task{
+    background-color: #db504a;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/*Footer*/
+.color-footer{
+    background-color: #db504a;
+    height: 8vh;
+    width: 100%;
+    margin-top: auto; 
+}
+.div-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 1.3rem;
+    height: 8vh;
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+/*Media queries for 400px*/
+@media screen and (min-width: 400px){
+
+.no-display-block{
+    display: none;
+} 
+
+.no-nav-bar{
+    display: none;
+}
+
+.bigger-nav{
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+   
+}
+.button-big{
+    padding-left: 6px;
+    color: white;
+    text-decoration: none;
+}
+.button-big:hover{
+    color: white;
+}
+.button-big:active{
+      color: rgb(209, 114, 114);
+}
+.next-screen{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+}
+
+/*Media queries for 600px*/
+@media screen and (min-width: 600px){
+/*links in nav*/
+.bigger-nav{
+    margin-left: 10px;
+    width: 20vh; 
+}
+.button-big{
+    padding-left: 5px;
+    font-size: 1.0rem;
+    
+}
+#title-task {
+    font-size: 2.5rem;
+    width: 50vh;
+    display: flex;
+    justify-content: right;
+}
+
+}
+
+/*Media queries for 768px*/
+@media screen and (min-width: 768px){
+/*Links in nav*/
+.bigger-nav{
+    margin-left: 25px;
+}
+.button-big{
+    padding-left: 10px;
+    font-size: 1.1rem;
+        
+}
+#title-task{
+    font-size: 2.6rem;
+    width: 50vh;
+}
+}
+
+/*Media queries for 992px*/
+@media screen and (min-width: 992px){
+#title-task {
+    font-size: 2.9rem;
+    width: 59vh;
+}
+
+.button-big{
+    padding-left: 10px;
+    font-size: 1.3rem;
+        
+}
+.bigger-nav{
+    margin-left: 25px;
+    width: 25vh;
+}
+ 
+}
