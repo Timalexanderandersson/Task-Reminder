@@ -27,11 +27,11 @@
         <p><strong>To Do: </strong>{{ task.description }}</p>
         <p> <strong>Before: </strong>{{ task.due_date| date:'Y-m-d' }} <strong>At </strong> {{ task.time_date }}</p>
         <div class="d-flex mb-2">
-            <form method="get" action="" class="me-2">
+            <form method="get" action="{% url 'delete_site' task.pk %}" class="me-2">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
-            <form method="get" action="">
+            <form method="get" action="{% url 'updating_task' task.pk %}">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-success">Edit</button>
             </form>

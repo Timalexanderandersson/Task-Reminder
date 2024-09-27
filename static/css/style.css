@@ -56,6 +56,10 @@ main{
     width: 100%;
     
 }
+/*textarea*/
+textarea {
+    width:35vh;
+}
 
 /*Index.html page*/
 .container-task{
@@ -79,6 +83,7 @@ main{
 /*Task h2*/
 #task-add{
     padding-right: 2vh;
+    font-size: 1.2rem;
 }
 .penn-icon{
     font-size: 1.5rem;
@@ -129,8 +134,16 @@ main{
     border-radius: 8px;
     padding: 5px;
     display: flex;
-    justify-content: end;
-    margin-bottom: 10px;
+    justify-content: center;
+}
+/*Change color when completed with task*/
+.new-header{
+    background-color: rgb(137, 170, 137);
+}
+/*Color for all Links*/
+.links-for-all{
+    color: #db504a;
+    text-decoration: none;
 }
 /*link to tasks*/
 .link-header{
@@ -138,7 +151,6 @@ main{
     text-decoration: none;
     font-size: 1.3rem;
     margin-right: 10vh;
-    
 }
 .link-header:hover{
     color: white;

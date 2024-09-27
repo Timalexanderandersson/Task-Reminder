@@ -9,7 +9,7 @@
         <i class="fa-solid fa-pen-fancy penn-icon"></i>
     </div>
     <div class="task-add-box">
-        <form method="post" class="formdetails" action="{% url 'newpage' show_title.id %}" >
+        <form method="post" class="formdetails" action="" >
             {{ form_user|crispy }}
             {% csrf_token %}
             <button type="submit" id="first-button">Add task</button>
