@@ -28,16 +28,15 @@
         <p> <strong>Before: </strong>{{ task.due_date| date:'Y-m-d' }} <strong>At </strong> {{ task.time_date }}</p>
         <div class="d-flex mb-2">
             <form method="get" action="{% url 'delete_site' task.pk %}" class="me-2">
-                {% csrf_token %}
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
             <form method="get" action="{% url 'updating_task' task.pk %}">
-                {% csrf_token %}
                 <button type="submit" class="btn btn-success">Edit</button>
             </form>
         </div>
     </div>
     {% empty %}
+    <h3 class="text-center">You have no tasks!</h3>
     {% endfor %}
 </div>
 {% endblock %}
