@@ -57,7 +57,7 @@ class UpdateTask(LoginRequiredMixin,SuccessMessageMixin,UpdateView):
 #Account sign up function
 def signing_up(request):
     if request.method == 'GET':
-        form = SigningUp()
+        form = SigningUp()      
     else:
         form = SigningUp(request.POST)
         if form.is_valid():
@@ -88,7 +88,6 @@ def AccountLogin(request):
                 login(request, user)
                 messages.success(request, f'Welcome {username}.')
                 return redirect('task-create')
-
         messages.error(request, f'Wrong username or password')
         return render(request, 'login.html', {'form':form})
 

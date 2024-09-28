@@ -44,6 +44,10 @@ body{
 .color-hover:active{
     color: rgb(209, 114, 114);
 }
+/*user name pop up*/
+.user-name{
+    background-color: #fceeee;
+}
 
 /*Main*/
 main{
@@ -55,7 +59,20 @@ main{
     flex-direction: column;
     width: 100%;
     
+    
 }
+/*Register div*/
+.register-class{
+border-color: #db504a;
+border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+width: auto;
+padding:5vh;
+background-color: hsl(0, 67%, 91%);
+height: auto;
+}
+
 /*textarea*/
 textarea {
     width:35vh;
@@ -83,7 +100,7 @@ textarea {
 /*Task h2*/
 #task-add{
     padding-right: 2vh;
-    font-size: 1.2rem;
+
 }
 .penn-icon{
     font-size: 1.5rem;
@@ -94,6 +111,7 @@ textarea {
     height: auto;
     border-radius: 8px;
     margin-top: 4px;
+    background-color: hsl(0, 67%, 91%);
 
 }
 /*Addbutton*/

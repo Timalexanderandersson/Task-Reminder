@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="register-class ">
 <div class="col-12">
     <div class="text-center">
-    <form method="post" class="text-center mb-3">
+    <form method="post" class="text-center mb-5">
     {% csrf_token %}
     <h2 class="mb-5">Access Your Account</h2>
-   {{ form.as_p }}
+    {{ form.as_p}}
+ 
    <button type="submit" id="first-button" class="mb-3">Sign in</button>
+   {% for message in messages %}
+   <li>{{ message }}</li>
+   {% endfor %}
     </form>
-    {% for message in messages %}
-           <li class="text-center mb-3">{{ message }}</li>
-        {% endfor %}
     <p class="text-center ">Don't have an account?<a class="links-for-all" href="{% url 'register' %}"><strong> Register</strong></a></p> 
+</div>
 </div>
 </div>
 {% endblock %}

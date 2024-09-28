@@ -32,6 +32,7 @@
     </div>
 </div>
 <!--Showing the task-->
+
 <div class="for-each-task mb-3">
     {% for task in allinfo %}
     <div class="tasks-header mb-3 {% if task.completed %}new-header{% endif %}">
@@ -39,6 +40,7 @@
         <button class="task-buttons">open</button>
     </div>
     <div class="task-details">
+
         <p><strong>To Do: </strong>{{ task.description }}</p>
         <p> <strong>Before: </strong>{{ task.due_date| date:'Y-m-d' }} <strong>At </strong> {{ task.time_date }}</p>
         <div class="d-flex mb-2">
@@ -49,7 +51,9 @@
                 <button type="submit" class="btn btn-success">Edit</button>
             </form>
         </div>
+    
     </div>
+
     {% empty %}
     <h3 class="text-center">You have no tasks!</h3>
     {% endfor %}

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="register-class ">
 <div class="container text-center">
     <form method="post">
     {% csrf_token %}
@@ -8,5 +9,6 @@
     </form>
     <p>Go back to your <a class="links-for-all" href="{% url 'task-create' %}"><strong>tasks</strong></a></p> 
    
+</div>
 </div>
 {% endblock %}
