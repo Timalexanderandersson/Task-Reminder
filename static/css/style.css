@@ -58,13 +58,24 @@ main{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    
-    
 }
 
 /*Search bar*/
 #search-bar{
-    width: 20vh;
+    width: 45vh;
+    
+}
+/*searching task button*/
+.button-searching{
+    border: 0.5px solid #b87b79;
+    background-color: hsl(0, 67%, 91%);
+    border-radius: 5px;
+    padding: 5px;
+}
+/*Input area for search*/
+.input-search{
+    border: 0.5px solid #b87b79;
+    border-radius: 5px;
 }
 /*Register div*/
 .register-class{
