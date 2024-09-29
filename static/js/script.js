@@ -5,7 +5,6 @@ addbutton.addEventListener('click', function(){
     let taskform = document.querySelector('.formdetails');
     if(taskform.style.display == 'none' || taskform.style.display == ''){
         taskform.style.display = 'block';
-        taskform.style.paddingLeft = '5vh';
         addbutton.innerText = "X";
         addbutton.style.backgroundColor ='orange';
         addbutton.style.padding = '5px';

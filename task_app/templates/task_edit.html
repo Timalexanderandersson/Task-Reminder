@@ -15,7 +15,13 @@
         {% endif %}
     {% endfor %}
 {% endif %}
-
+<!-- Search area for finding a task -->
+<form method="GET" action="#" id="search-bar">
+    <div class="input-group mb-3">
+        <input type="text" name="search-text" class="form-control" placeholder="Search Your Task..." aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+      </div>
+</form>
 <!--Dropdown to show the form-->
 <div class="container-task">
     <div class="cool-color-here">
@@ -23,7 +29,7 @@
         <button class="addbutton">Add</button>
         <i class="fa-solid fa-pen-fancy penn-icon"></i>
     </div>
-    <div class="task-add-box">
+    <div class="task-add-box d-flex justify-content-center align-content-center">
         <form method="post" class="formdetails text-center">
             {% csrf_token %}
             {{ form.as_p }}

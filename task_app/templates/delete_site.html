@@ -11,7 +11,7 @@
       <form method="post" class="text-center" action="{% url 'delete_site' tasks.pk %}">
           {% csrf_token %}
           <button type="submit" class="btn btn-danger mb-3">Delete</button>
-           <p>don't want to delete? <a class="links-for-all" href="{% url 'task-create' %}">Go back</a> </p>
+           <p>don't want to delete? <a class="links-for-all" href="{% url 'task-create' %}"><strong>Go back</strong></a></p>
   </form>  
   
   </div>

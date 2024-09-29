@@ -6,7 +6,7 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-success mb-3">Save change</button>
-    <p>don't want to edit? <a class="links-for-all" href="{% url 'Homepage' %}">Go back</a> </p>
+    <p>don't want to edit? <a class="links-for-all" href="{% url 'Homepage' %}"><strong>Go back</strong></a> </p>
 </form>
 </div>
 {% endblock %}

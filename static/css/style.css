@@ -61,6 +61,11 @@ main{
     
     
 }
+
+/*Search bar*/
+#search-bar{
+    width: 20vh;
+}
 /*Register div*/
 .register-class{
 border-color: #db504a;
@@ -127,9 +132,10 @@ textarea {
 .form-task-edit{
     width: auto;
 }
+/*Form for making the tasks*/
 .formdetails{
     display: none;
-    width: 80%;
+
 }
 /*Add button inside the task creater*/
 #first-button{
