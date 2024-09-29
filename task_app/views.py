@@ -15,6 +15,23 @@ def homepage(request):
         return redirect('task-create')
     return render(request, 'index.html',)
 
+#Searching bar to find different tasks.
+@login_required
+def search_here(request):
+    form = PostUser(request.POST)
+    allinfo = TaskUser.objects.filter(user=request.user)
+    searching = request.GET.get('search-text').strip()
+    if searching == '':
+        messages.error(request, 'Search for a task')
+        return redirect('task-create')
+    allinfo = allinfo.filter(title__startswith=searching)
+    if allinfo.exists() == False:
+        messages.error(request,'No task with this name..')
+        return redirect('task-create')
+    return render(request, 'task_edit.html', {
+        'form': form,
+        'allinfo': allinfo, 
+    })
 
 # Adding to the task list as user.
 @login_required
