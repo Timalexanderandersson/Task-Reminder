@@ -36,7 +36,7 @@ def search_here(request):
     if searching == '':
         messages.error(request, 'Search for a task')
         return redirect('task-create')
-    allinfo = allinfo.filter(title__startswith=searching)
+    allinfo = allinfo.filter(title__icontains=searching)
     if allinfo.exists() == False:
         messages.error(request,'No task with this name.')
         return redirect('task-create')
