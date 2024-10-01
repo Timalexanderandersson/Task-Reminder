@@ -62,7 +62,7 @@ main{
 
 /*Search bar*/
 #search-bar{
-    width: 25vh;
+    width: 80%;
     margin-top: 3vh;
 }
 /*searching task button*/
@@ -166,7 +166,7 @@ textarea {
 /*New task created*/
 .for-each-task{
     height: auto;
-    width: 90%;
+    width: 78%;
 }
 .tasks-header{
     height: auto;
