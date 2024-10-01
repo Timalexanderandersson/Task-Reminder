@@ -39,9 +39,11 @@
     </div>
 </div>
 <!--Showing the task-->
-
 <div class="for-each-task mb-3">
     {% for task in allinfo %}
+    <div>
+        <h2 class="text-center mb-3">Your Task list <i class="fa-solid fa-arrow-down-long"></i></h2>
+    </div>
     <div class="tasks-header mb-3 {% if task.completed %}new-header{% endif %}">
         <h2>{{ task.title }}</h2>
         <button class="task-buttons">open</button>
