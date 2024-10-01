@@ -1,39 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="register-class ">
-<div>
-    <h1>Create Your Account</h1>
-</div>
+    <div>
+        <h1>Create Your Account</h1>
+    </div>
 
     <form method="post" class="col-8">
         {% csrf_token %}
-    <div class="mb-3 ">
-        <p>Username:</p>
-        {{ form.username }}
-        {% for text in form.username.errors %}
-        <li>{{ text }}</li>
-        {% endfor %}
-        <p>Email:</p>
-        {{ form.email }}
-        {% for text in form.email.errors %}
-        <li>{{ text }}</li>
-        {% endfor %}
-        <p>Password:</p>
-        {{ form.password1 }}
-        {% for text in form.password1.errors %}
-        <li>{{ text }}</li>
-        {% endfor %}
-        <p>Password Again: </p>
-        {{ form.password2 }}
-        {% for text in form.password2.errors %}
-        <li>{{ text }}</li>
-        {% endfor %}
-    </div>
-    <div>
-        <button type="submit" class="mb-3 btn btn-success">Sign up</button>
-        <p class="text-center">Already have an account?<a class="links-for-all" href="{% url 'login' %}"><strong> Log in
-                    here</strong></a> </p>
-    </div>
+        <div class="mb-3 ">
+            <p>Username:</p>
+            {{ form.username }}
+            {% for text in form.username.errors %}
+            <li>{{ text }}</li>
+            {% endfor %}
+            <p>Email:</p>
+            {{ form.email }}
+            {% for text in form.email.errors %}
+            <li>{{ text }}</li>
+            {% endfor %}
+            <p>Password:</p>
+            {{ form.password1 }}
+            {% for text in form.password1.errors %}
+            <li>{{ text }}</li>
+            {% endfor %}
+            <p>Password Again: </p>
+            {{ form.password2 }}
+            {% for text in form.password2.errors %}
+            <li>{{ text }}</li>
+            {% endfor %}
+        </div>
+        <div>
+            <button type="submit" class="mb-3 btn btn-success">Sign up</button>
+            <p class="text-center">Already have an account?<a class="links-for-all" href="{% url 'login' %}"><strong>
+                        Log in
+                        here</strong></a> </p>
+        </div>
     </form>
 </div>
 

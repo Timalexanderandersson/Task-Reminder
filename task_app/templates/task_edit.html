@@ -1,26 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 {% if messages %}
-    {% for message in messages %}
-    {% if message.tags == 'error' %}
-        <div class="alert alert-warning alert-dismissible " role="alert" >
-           <li>{{ message }}</li>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        {% elif message.tags == 'success' %}
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        {% endif %}
-    {% endfor %}
+{% for message in messages %}
+{% if message.tags == 'error' %}
+<div class="alert alert-warning alert-dismissible " role="alert">
+    <li>{{ message }}</li>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% elif message.tags == 'success' %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+{% endfor %}
 {% endif %}
 <!-- Search area for finding a task -->
 <form method="GET" action="{% url 'search_here' %}" id="search-bar">
     <div class="input-group mb-3">
-        <input type="text" name="search-text" class="form-control input-search" placeholder="Search Your Task..." aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="button-searching"  type="submit" id="button-addon2">Button</button>
-      </div>
+        <input type="text" name="search-text" class="form-control input-search" placeholder="Search Your Task..."
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="button-searching" type="submit" id="button-addon2">Button</button>
+    </div>
 </form>
 <!--Dropdown to show the form-->
 <div class="container-task">
@@ -39,17 +40,17 @@
     </div>
 </div>
 <!--Showing the task-->
+{% if allinfo %}
+</div>
+<h2 class="text-center mb-3">Your Task list <i class="fa-solid fa-arrow-down-long"></i></h2>
+</div>
 <div class="for-each-task mb-3">
     {% for task in allinfo %}
-    <div>
-        <h2 class="text-center mb-3">Your Task list <i class="fa-solid fa-arrow-down-long"></i></h2>
-    </div>
     <div class="tasks-header mb-3 {% if task.completed %}new-header{% endif %}">
         <h2>{{ task.title }}</h2>
         <button class="task-buttons">open</button>
     </div>
     <div class="task-details">
-
         <p><strong>To Do: </strong>{{ task.description }}</p>
         <p> <strong>Before: </strong>{{ task.due_date| date:'Y-m-d' }} <strong>At </strong> {{ task.time_date }}</p>
         <div class="d-flex mb-2">
@@ -60,11 +61,10 @@
                 <button type="submit" class="btn btn-success">Edit</button>
             </form>
         </div>
-    
     </div>
-
     {% empty %}
     <h3 class="text-center">You have no tasks!</h3>
     {% endfor %}
+    {% endif %}
 </div>
 {% endblock %}

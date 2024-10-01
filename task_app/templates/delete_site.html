@@ -2,20 +2,20 @@
 {% block content %}
 <!-- delete button -->
 <div class="register-class text-center">
-<div class="text-center">
+  <div class="text-center">
     <h2 class="mb-4">Are you sure you want to delete?</h2>
-  <div class="tasks-header mb-4 text-center">
-    <h2 class="text-center">{{ tasks.title}}?</h2>
+    <div class="tasks-header mb-4 text-center">
+      <h2 class="text-center">{{ tasks.title}}?</h2>
 
-  </div>
-  <div>
+    </div>
+    <div>
       <form method="post" class="text-center" action="{% url 'delete_site' tasks.pk %}">
-          {% csrf_token %}
-          <button type="submit" class="btn btn-danger mb-3">Delete</button>
-           <p>don't want to delete? <a class="links-for-all" href="{% url 'task-create' %}"><strong>Go back</strong></a></p>
-  </form>  
-  
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger mb-3">Delete</button>
+        <p>don't want to delete? <a class="links-for-all" href="{% url 'task-create' %}"><strong>Go back</strong></a>
+        </p>
+      </form>
+    </div>
   </div>
-</div>
 </div>
 {% endblock %}
