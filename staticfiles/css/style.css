@@ -44,6 +44,10 @@ body{
 .color-hover:active{
     color: rgb(209, 114, 114);
 }
+/*user name pop up*/
+.user-name{
+    background-color: #fceeee;
+}
 
 /*Main*/
 main{
@@ -54,11 +58,40 @@ main{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    
 }
+
+/*Search bar*/
+#search-bar{
+    width: 25vh;
+    margin-top: 3vh;
+}
+/*searching task button*/
+.button-searching{
+    border: 0.5px solid #b87b79;
+    background-color: hsl(0, 67%, 91%);
+    border-radius: 5px;
+    padding: 5px;
+}
+/*Input area for search*/
+.input-search{
+    border: 0.5px solid #b87b79;
+    border-radius: 5px;
+}
+/*Register div*/
+.register-class{
+border-color: #db504a;
+border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+width: auto;
+padding:2vh;
+background-color: hsl(0, 67%, 91%);
+height: auto;
+}
+
 /*textarea*/
 textarea {
-    width:35vh;
+    width:100%;
 }
 
 /*Index.html page*/
@@ -83,7 +116,7 @@ textarea {
 /*Task h2*/
 #task-add{
     padding-right: 2vh;
-    font-size: 1.2rem;
+
 }
 .penn-icon{
     font-size: 1.5rem;
@@ -94,6 +127,7 @@ textarea {
     height: auto;
     border-radius: 8px;
     margin-top: 4px;
+    background-color: hsl(0, 67%, 91%);
 
 }
 /*Addbutton*/
@@ -109,9 +143,16 @@ textarea {
 .form-task-edit{
     width: auto;
 }
+/*Form for making the tasks*/
 .formdetails{
     display: none;
-    width: 80%;
+    width: 100%;
+    max-width: 380px;
+
+}
+/*Edit title*/
+.h3-edit{
+    margin-top: 1vh;
 }
 /*Add button inside the task creater*/
 #first-button{
@@ -247,6 +288,9 @@ textarea {
     justify-content: center;
 
 }
+#search-bar{
+    width: 35vh;
+}
 
 }
 
@@ -267,6 +311,13 @@ textarea {
     width: 50vh;
     display: flex;
     justify-content: right;
+}
+#search-bar{
+    margin-top: 3vh;
+    width: 45vh;
+}
+#search-bar{
+    width: 45vh;
 }
 
 }
