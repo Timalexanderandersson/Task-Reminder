@@ -21,4 +21,4 @@ class SigningUp(UserCreationForm):
 #Sign in to account
 class SignIn(forms.Form):
     username = forms.CharField(max_length=50)
-    password = forms.CharField(max_length=60, widget=forms.PasswordInput)        
+    password = forms.CharField(max_length=60, widget=forms.PasswordInput)

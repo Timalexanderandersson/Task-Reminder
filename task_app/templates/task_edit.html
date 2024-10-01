@@ -30,8 +30,9 @@
         <i class="fa-solid fa-pen-fancy penn-icon"></i>
     </div>
     <div class="task-add-box d-flex justify-content-center align-content-center">
-        <form method="post" class="formdetails text-center">
+        <form method="post" class="formdetails text-center mb-3">
             {% csrf_token %}
+            <h3 class="mb-3 h3-edit">Edit your task</h3>
             {{ form.as_p }}
             <button type="submit" id="first-button">Add task</button>
         </form>

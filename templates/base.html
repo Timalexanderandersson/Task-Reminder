@@ -51,8 +51,9 @@
       </ul>
     </div>
   </header>
+  <!-- Username -->
   {%if request.user.is_authenticated %}
-  <span class="text-center user-name">User: <strong>{{ request.user.username }}</strong></span>
+  <div class="text-center user-name"><strong>User: </strong>{{ request.user.username }}</div>
   {% endif %}
   <!-- Main Content -->
   <main>

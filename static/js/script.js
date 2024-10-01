@@ -32,7 +32,7 @@ for (let i = 0; i < addbuttontask.length; i++){
         
             } else{
                 taskinside.style.display = 'none'
-                addbuttontask[i].innerText = "Add";
+                addbuttontask[i].innerText = "Open";
                 addbuttontask[i].style.backgroundColor ='rgb(42, 156, 42)';
             }  
     })

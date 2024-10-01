@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- Form and link for login, register -->
 <div class="register-class ">
 <div class="col-12">
     <div class="text-center">
@@ -8,7 +9,7 @@
     <h2 class="mb-5">Access Your Account</h2>
     {{ form.as_p}}
  
-   <button type="submit" id="first-button" class="mb-3">Sign in</button>
+   <button type="submit"  class="mb-3 btn btn-success">Sign in</button>
    {% for message in messages %}
    <li>{{ message }}</li>
    {% endfor %}

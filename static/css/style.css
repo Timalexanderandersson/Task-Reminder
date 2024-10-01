@@ -62,8 +62,8 @@ main{
 
 /*Search bar*/
 #search-bar{
-    width: 45vh;
-    
+    width: 25vh;
+    margin-top: 3vh;
 }
 /*searching task button*/
 .button-searching{
@@ -84,14 +84,14 @@ border-radius: 5px;
 border-style: solid;
 border-width: 1px;
 width: auto;
-padding:5vh;
+padding:2vh;
 background-color: hsl(0, 67%, 91%);
 height: auto;
 }
 
 /*textarea*/
 textarea {
-    width:35vh;
+    width:100%;
 }
 
 /*Index.html page*/
@@ -146,7 +146,13 @@ textarea {
 /*Form for making the tasks*/
 .formdetails{
     display: none;
+    width: 100%;
+    max-width: 380px;
 
+}
+/*Edit title*/
+.h3-edit{
+    margin-top: 1vh;
 }
 /*Add button inside the task creater*/
 #first-button{
@@ -282,6 +288,9 @@ textarea {
     justify-content: center;
 
 }
+#search-bar{
+    width: 35vh;
+}
 
 }
 
@@ -302,6 +311,13 @@ textarea {
     width: 50vh;
     display: flex;
     justify-content: right;
+}
+#search-bar{
+    margin-top: 3vh;
+    width: 45vh;
+}
+#search-bar{
+    width: 45vh;
 }
 
 }

@@ -1,5 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- Message for succes or errors -->
+{% if messages %}
+    {% for message in messages %}
+    {% if message.tags == 'error' %}
+        <div class="alert alert-warning alert-dismissible " role="alert" >
+           <li>{{ message }}</li>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% elif message.tags == 'success' %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<!-- Create account/login -->
     <div class="container-task">
         <div class="cool-color-here ">
             <h2 id="task-add ">Create task</h2>
