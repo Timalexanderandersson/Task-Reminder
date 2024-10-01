@@ -7,11 +7,11 @@ class TaskUser(models.Model):
         User, on_delete=models.CASCADE, null=True, blank=True
     )
     title = models.CharField(max_length=200)
-    description = models.TextField(blank=True, null=True)
+    description = models.TextField(blank=False)
     completed = models.BooleanField(default=False)
-    due_date = models.DateTimeField(blank=True)
+    due_date = models.DateTimeField(blank=False, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
-    time_date = models.TimeField()
+    time_date = models.TimeField(blank=False)
 
 
     def __str__(self):
