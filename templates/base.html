@@ -21,7 +21,7 @@
     <!-- Nav button and title -->
     <div class="col no-display-block"></div>
     <div class="text-center next-screen">
-      <h1 id="title-task">Task Reminder</a></h1>
+      <h1 id="title-task">Task Reminder</h1>
       <div class="bigger-nav">
         {%if request.user.is_authenticated %}
         <a class="button-big" href="{% url 'task-create' %}">Home</a>
@@ -48,7 +48,6 @@
         <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
       </ul>
       {% endif %}
-      </ul>
     </div>
   </header>
   <!-- Username -->
