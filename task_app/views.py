@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import DeleteView, UpdateView
 from .models import TaskUser
-from .forms import PostUser, SigningUp, SignIn, ContactForms
+from .forms import PostUser, SigningUp, SignIn, ContactForms, PostUserFirst
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
@@ -58,7 +58,7 @@ def taskpush(request):
     '''
     allinfo = TaskUser.objects.filter(user=request.user).order_by('-created_at')
     if request.method == 'POST':
-            form = PostUser(request.POST)
+            form = PostUserFirst(request.POST)
             if form.is_valid():
                tasks = form.save(commit=False)
                tasks.user = request.user
@@ -68,7 +68,7 @@ def taskpush(request):
             else:
                 messages.error(request, 'Did not fill in all.')
     else:
-            form = PostUser()
+            form = PostUserFirst()
     return render(request, 'task_edit.html', {
         'form': form,
         'allinfo':allinfo,
@@ -156,6 +156,10 @@ def accountlogout(request):
     return render(request,'logout.html')
 
 def contact_form(request):
+    '''
+    Function that send the contact form.
+    then sends the user to form_success webpage.
+    '''
     if request.method == 'POST':
         form = ContactForms(request.POST)
         if form.is_valid:
@@ -167,8 +171,6 @@ def contact_form(request):
 
 def form_success(request):
     '''
-    Function for redirection when enter website.
-    if user is authenticated redirect to task-create.
-    if not authenticated send to index.html
+   Function that renders visitior/user the successfully submit webpage.
     '''
     return render(request, 'email_sent.html',)
