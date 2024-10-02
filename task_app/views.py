@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import DeleteView, UpdateView
 from .models import TaskUser
-from .forms import PostUser, SigningUp, SignIn
+from .forms import PostUser, SigningUp, SignIn, ContactForms
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
@@ -113,7 +113,7 @@ def signing_up(request):
            return redirect('task-create')    
     return render(request, 'register.html',{'form':form})
 
-def AccountLogin(request):
+def accountlogin(request):
     '''
     Function for user to sign in.
 
@@ -142,7 +142,7 @@ def AccountLogin(request):
         return render(request, 'login.html', {'form':form})
 
 @login_required
-def AccountLogout(request):
+def accountlogout(request):
     '''
     Function for sign out.
 
@@ -154,3 +154,21 @@ def AccountLogout(request):
         messages.success(request, 'You signed out successfully.') 
         return redirect('Homepage')   
     return render(request,'logout.html')
+
+def contact_form(request):
+    if request.method == 'POST':
+        form = ContactForms(request.POST)
+        if form.is_valid:
+            form.save()
+        return redirect('form_success')
+    else:
+        form = ContactForms()
+    return render(request, 'contact.html', {'form':form}) 
+
+def form_success(request):
+    '''
+    Function for redirection when enter website.
+    if user is authenticated redirect to task-create.
+    if not authenticated send to index.html
+    '''
+    return render(request, 'email_sent.html',)

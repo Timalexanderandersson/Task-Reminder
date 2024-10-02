@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import TaskUser
+from .models import TaskUser, FormContact
 from django.contrib.auth.forms import UserCreationForm
 
 #Posting Tasks
@@ -23,3 +23,9 @@ class SigningUp(UserCreationForm):
 class SignIn(forms.Form):
     username = forms.CharField(max_length=50)
     password = forms.CharField(max_length=60, widget=forms.PasswordInput)
+
+#Contact form
+class ContactForms(forms.ModelForm):
+    class Meta:
+        model = FormContact
+        fields = ['name','email','message']

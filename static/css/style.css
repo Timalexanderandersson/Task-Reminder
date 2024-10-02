@@ -271,7 +271,7 @@ textarea {
    
 }
 .button-big{
-    padding-left: 6px;
+    margin-left: 2px;
     color: white;
     text-decoration: none;
 }
@@ -294,21 +294,27 @@ textarea {
 
 }
 
+/*Media queries for 450px*/
+@media screen and (min-width: 450px){
+    .button-big{
+        margin-left: 6px;
+    }
+}
+
 /*Media queries for 600px*/
 @media screen and (min-width: 600px){
 /*links in nav*/
 .bigger-nav{
-    margin-left: 10px;
-    width: 20vh; 
+    margin-left: 5px;
+    width: 25vh;
 }
 .button-big{
-    padding-left: 5px;
     font-size: 1.0rem;
-    
+    margin-right: 3px;
 }
 #title-task {
-    font-size: 2.5rem;
-    width: 50vh;
+    font-size: 2.3rem;
+    width: 40vh;
     display: flex;
     justify-content: right;
 }
@@ -329,31 +335,24 @@ textarea {
     margin-left: 25px;
 }
 .button-big{
-    padding-left: 10px;
-    font-size: 1.1rem;
-        
+    font-size: 1.0rem;  
 }
 #title-task{
     font-size: 2.6rem;
     width: 50vh;
 }
 }
-
 /*Media queries for 992px*/
 @media screen and (min-width: 992px){
 #title-task {
     font-size: 2.9rem;
     width: 59vh;
 }
-
 .button-big{
-    padding-left: 10px;
-    font-size: 1.3rem;
-        
+    font-size: 1.2rem;    
 }
 .bigger-nav{
     margin-left: 25px;
-    width: 25vh;
+    width: 30vh;
 }
- 
 }

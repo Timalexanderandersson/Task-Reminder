@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Form and link for login, register -->
+<div class="register-class ">
+    <div class="col-12">
+        <div class="text-center">
+            {% csrf_token %}
+            <h2 class="mb-3">We have received your message!</h2>
+            <p class="mb-3">We will get back to you as soon as possible!</p>
+            <p class="text-center ">Go back to <a class="links-for-all" href="{% url 'Homepage' %}"><strong>
+                        Homepage</strong></a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
