@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .forms import PostUser, SigningUp, SignIn
+from .forms import PostUser, SigningUp, SignIn, PostUserFirst
 
 # Create your tests here.
 class PostUserTest(TestCase):
@@ -72,7 +72,7 @@ class PostUserTest(TestCase):
 
 class SignInTest(TestCase):
     '''
-    test for all sign in.
+    test for all sign in inputs.
     '''
     def test_sign_in_is_valid(self):
         form_sign = SignIn({
@@ -101,6 +101,7 @@ class SignInTest(TestCase):
 class SignUpTest(TestCase):
     '''
     test for sign up form.
+    testing for requirements of input.
     '''
     def test_sign_up_is_valid(self):
         form_register = SigningUp({
@@ -145,4 +146,17 @@ class SignUpTest(TestCase):
         'password1': 'wowthispassword123',
         'password2': ''
     })
-        self.assertFalse(form_register.is_valid(), msg="Form should have invalid second_password.")    
+        self.assertFalse(form_register.is_valid(), msg="Form should have invalid second_password.")
+
+class PostUserFirstTest(TestCase):
+    '''
+    Test to se if PostUserFirst is valid without completed.
+    '''
+    def test_post_user_completed_gone(self):
+        form = PostUserFirst({
+            'title':'car wash',
+            'description':'wash my car',
+            'due_date':'2024-05-06',
+            'time_date':'12:30',
+        })
+        self.assertTrue(form.is_valid(), msg="Form should be valid")

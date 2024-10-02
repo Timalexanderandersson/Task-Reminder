@@ -16,6 +16,7 @@ class TaskUser(models.Model):
 
     def __str__(self):
         return self.title
+        
 #Contact form
 class FormContact(models.Model):
     name = models.CharField(max_length=70, blank=False)
