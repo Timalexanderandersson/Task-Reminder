@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-#Task model
+# Task model
 class TaskUser(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, null=True, blank=True
@@ -13,11 +13,11 @@ class TaskUser(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     time_date = models.TimeField(blank=False)
 
-
     def __str__(self):
         return self.title
-        
-#Contact form
+
+
+# Contact form
 class FormContact(models.Model):
     name = models.CharField(max_length=70, blank=False)
     email = models.EmailField(blank=False)

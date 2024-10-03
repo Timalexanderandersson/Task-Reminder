@@ -513,19 +513,19 @@ These are the things used for this project.
 <details>
 <summary>Index tested</summary>
 <br>
-<img src="">
+<img src="assets/readme/index_no_warning.PNG">
 </details>
 
 <details>
 <summary>Contact tested</summary>
 <br>
-<img src="">
+<img src="assets/readme/contect_no_erro.PNG">
 </details>
 
 <details>
 <summary>sign in tested</summary>
 <br>
-<img src="">
+<img src="assets/readme/login_no_error.PNG">
 </details>
 
 <details>
@@ -566,10 +566,81 @@ These are the things used for this project.
 
 
 ### CSS jigsaw
+
+<details>
+<summary>CSS Test</summary>
+<br>
+<img src="assets/readme/css_ok.PNG">
+</details>
+
+
 ### jshint Javascript
+
+<details>
+<summary>Jshint javascript </summary>
+<br>
+<img src="assets/readme/jshint_javascript.PNG">
+</details>
+
+* Jshint shows one warning that function may lead to confusing semantics, since its inside the loops.
+
+
 ### CI Python Linter
 
+<details>
+<summary>Views test</summary>
+<br>
+<img src="assets/readme/views_cleeen.PNG">
+</details>
+
+<details>
+<summary>Models test</summary>
+<br>
+<img src="assets/readme/models_py.PNG">
+</details>
+
+<details>
+<summary>urls test</summary>
+<br>
+<img src="assets/readme/urls_right.PNG">
+</details>
+
+<details>
+<summary>forms test</summary>
+<br>
+<img src="assets/readme/formmmmmmss.PNG">
+</details>
+
+
+
 ## Testing in django 
+
+### views
+
+| Status | **Sign Out - Redirect to Homepage** |
+|:------:|:-----------------------------------
+| &check; | When the user logs out, they are redirected to the homepage (status code 302). 
+
+| Status | **Sign In - Valid Sign In** |
+|:------:|:----------------------------
+| &check; | When the user enters the correct username and password, they are taken to the task creation page (status code 302). 
+
+### Models 
+
+
+| Status | **Contact Form - Valid Data** |
+|:------:|:-------------------------------
+| &check; | When the user submits the contact form with valid data, it gets saved. 
+
+### Forms
+
+### Post User First Test
+
+| Status | **Post User First - Valid Data** 
+|:------:|:----------------------------------
+| &check; | When the user submits the form with all required fields completed, the form is valid.
+
+
 
 ## Bugs
 #### No bugs found.
@@ -618,5 +689,7 @@ https://medium.com/@buczynski.rafal/navigation-through-django-views-testing-9070
 https://fontawesome.com/
 https://getbootstrap.com/
 https://balsamiq.com/
-## Acknowledgements
+https://coolors.co/ for the colors in the website.
 
+## Acknowledgements
+* I would like to thank my mentor, Spence for help with guidance with my project.
