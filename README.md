@@ -272,7 +272,7 @@ When the user story is done.
 <img src="assets/readme/homepage_mobil.PNG">
 </details>
 
-* Homepage shows user to register account to get access to the test reminder.
+* Homepage shows user to register account to get access to the task reminder.
 * show links to login
 * shows link to register
 * Responsive
@@ -293,7 +293,7 @@ When the user story is done.
 * Shows User where to add tasks.
 * User can open there own tasks on the open button.
 * Shows clear text where your new tasks are made.
-* Responsive site.
+* Responsive .
 
 ### Edit tasks
 
@@ -405,7 +405,7 @@ When the user story is done.
 <img src="assets/readme/contact_mobil_cool.PNG">
 </details>
 
-* User can send a contect for to Task reminder.
+* User can send a contact to Task reminder.
 
 ### Sign up for account
 
@@ -529,9 +529,11 @@ These are the things used for this project.
 </details>
 
 <details>
-<summary>sign up tested</summary>
+<summary>Sign up tested</summary>
 <br>
-<img src="">
+<img src="assets/readme/register_django_prob.PNG">
+
+*  Django error in register.
 </details>
 
 <details>
@@ -541,15 +543,21 @@ These are the things used for this project.
 </details>
 
 <details>
-<summary>tasks tested</summary>
+<summary>Tasks tested</summary>
 <br>
-<img src="">
+<img src="assets/readme/tasks_one_error.PNG">
+
+* Django problem with error.
 </details>
+
 
 <details>
 <summary>edit tested</summary>
 <br>
-<img src="">
+<img src="assets/readme/django_Edit.PNG">
+
+
+* django error in edit.
 </details>
 
 <details>
@@ -634,7 +642,6 @@ These are the things used for this project.
 
 ### Forms
 
-### Post User First Test
 
 | Status | **Post User First - Valid Data** 
 |:------:|:----------------------------------
