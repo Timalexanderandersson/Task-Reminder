@@ -18,14 +18,12 @@
 <body>
   <!-- Header -->
   <header class="header-bar">
-    <!-- Nav button and title -->
-    <div class="col no-display-block"></div>
     <div class="text-center next-screen">
       <h1 id="title-task">Task Reminder</h1>
       <div class="bigger-nav">
-        {%if request.user.is_authenticated %}
+        {% if request.user.is_authenticated %}
         <a class="button-big" href="{% url 'task-create' %}">Home</a>
-        <a class="button-big" href="{% url 'logout' %}">logout</a>
+        <a class="button-big" href="{% url 'logout' %}">Logout</a>
         <a class="button-big" href="{% url 'contact' %}">Contact</a>
         {% else %}
         <a class="button-big" href="{% url 'Homepage' %}">Home</a>
@@ -39,22 +37,24 @@
       <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fa-solid fa-arrow-down-short-wide color-hover"></i>
       </a>
-      <!-- Navbar after 400px -->
+      <!-- Dropdown Menu -->
       <div class="dropdown-menu">
         <ul>
-        {%if request.user.is_authenticated %}
-        <li><a class="dropdown-item" href="{% url 'task-create' %}">Home</a></li>
-        <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
-        <li><a class="dropdown-item" href="{% url 'contact' %}">Contact</a></li>
-        {% else  %}
-        <li><a class="dropdown-item" href="{% url 'Homepage' %}">Home</a></li>
-        <li><a class="dropdown-item" href="{% url 'register' %}">Sign up</a></li>
-        <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
-        <li><a class="dropdown-item" href="{% url 'contact' %}">Contact</a></li>
-      {% endif %}
+          {% if request.user.is_authenticated %}
+          <li><a class="dropdown-item" href="{% url 'task-create' %}">Home</a></li>
+          <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+          <li><a class="dropdown-item" href="{% url 'contact' %}">Contact</a></li>
+          {% else %}
+          <li><a class="dropdown-item" href="{% url 'Homepage' %}">Home</a></li>
+          <li><a class="dropdown-item" href="{% url 'register' %}">Sign up</a></li>
+          <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
+          <li><a class="dropdown-item" href="{% url 'contact' %}">Contact</a></li>
+          {% endif %}
         </ul>
-    </div>
+      </div>
+    </div> 
   </header>
+
   <!-- Username -->
   {%if request.user.is_authenticated %}
   <div class="text-center user-name"><strong>User: </strong>{{ request.user.username }}</div>

@@ -4,7 +4,7 @@
 {% for message in messages %}
 {% if message.tags == 'error' %}
 <div class="alert alert-warning alert-dismissible " role="alert">
-    <li>{{ message }}</li>
+    <ul><li>{{ message }}</li></ul>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 {% elif message.tags == 'success' %}
@@ -41,9 +41,8 @@
 </div>
 <!--Showing the task-->
 {% if allinfo %}
-
-<h2 class="text-center mb-3">Your Task list <i class="fa-solid fa-arrow-down-long"></i></h2>
-</div>
+<h2 class="text-center mb-3">Your Task list <i class="fa-solid fa-arrow-down-long"></i>
+</h2>
 <div class="for-each-task mb-3">
     {% for task in allinfo %}
     <div class="tasks-header mb-3 {% if task.completed %}new-header{% endif %}">
@@ -54,7 +53,7 @@
         <p><strong>To Do: </strong>{{ task.description }}</p>
         <p> <strong>Before: </strong>{{ task.due_date| date:'Y-m-d' }} <strong>At </strong> {{ task.time_date }}</p>
         <div class="d-flex mb-2">
-            <form method="get" action="{% url 'delete_site' task.pk %}" class="me-2">
+            <form method="get" action="{% url 'delete_site' task.pk %}">
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
             <form method="get" action="{% url 'updating_task' task.pk %}">

@@ -510,6 +510,60 @@ These are the things used for this project.
 ## Validation
 
 ### W3C Testing
+<details>
+<summary>Index tested</summary>
+<br>
+<img src="">
+</details>
+
+<details>
+<summary>Contact tested</summary>
+<br>
+<img src="">
+</details>
+
+<details>
+<summary>sign in tested</summary>
+<br>
+<img src="">
+</details>
+
+<details>
+<summary>sign up tested</summary>
+<br>
+<img src="">
+</details>
+
+<details>
+<summary>Sign out tested</summary>
+<br>
+<img src="">
+</details>
+
+<details>
+<summary>tasks tested</summary>
+<br>
+<img src="">
+</details>
+
+<details>
+<summary>edit tested</summary>
+<br>
+<img src="">
+</details>
+
+<details>
+<summary>delete tested</summary>
+<br>
+<img src="">
+</details>
+
+<details>
+<summary>success page tested tested</summary>
+<br>
+<img src="">
+</details>
+
 
 ### CSS jigsaw
 ### jshint Javascript
