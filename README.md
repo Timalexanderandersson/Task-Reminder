@@ -1,6 +1,6 @@
 # Task Reminder
-This is Task Reminder. It's designed to help users keeping track of importent things that need to get done.
-user can create tasks, mark tasks as compleded, edit the tasks and delete tasks. You need to have an account to use the Task Reminder.
+This is Task Reminder. It's designed to help users keeping track of important things that need to get done.
+user can create tasks, mark tasks as completed, edit the tasks and delete tasks. You need to have an account to use the Task Reminder.
 So user must create account by register and then have full access to the application.
 This is a Full Stack project build with the django framework.
 
@@ -43,7 +43,7 @@ As a **Site User** I can **Start using the Task Reminder** so that **can save th
 
 - User can register there own account.
 
-- If user is logged in can use the task reminder to add task.
+- If user is sign in, user can add tasks.
 
 - Own site for log in.
 
