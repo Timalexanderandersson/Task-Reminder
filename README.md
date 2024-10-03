@@ -537,7 +537,7 @@ These are the things used for this project.
 <details>
 <summary>Sign out tested</summary>
 <br>
-<img src="">
+<img src="assets/readme/sign_ooouut.PNG">
 </details>
 
 <details>
@@ -555,13 +555,13 @@ These are the things used for this project.
 <details>
 <summary>delete tested</summary>
 <br>
-<img src="">
+<img src="assets/readme/dele___ok.PNG">
 </details>
 
 <details>
 <summary>success page tested tested</summary>
 <br>
-<img src="">
+<img src="assets/readme/Done_success.PNG">
 </details>
 
 
