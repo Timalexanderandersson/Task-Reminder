@@ -78,6 +78,7 @@ class TestSignIn(TestCase):
 class SignOutTest(TestCase):
     '''
     Test for sign out redirect to homepage.
+
     '''
     def setUp(self):
         self.client = Client()
@@ -91,4 +92,5 @@ class SignOutTest(TestCase):
         self.client.login(username='tim', password='Monkey1234')
         answer = self.client.post(self.url,self.data)
         self.assertEqual(answer.status_code,302)
+        # Checking if user still exist in database after logout.
         self.assertTrue(User.objects.filter(username='tim').exists())

@@ -1,131 +1,509 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Task Reminder
+This is Task Reminder. It's designed to help users keeping track of importent things that need to get done.
+user can create tasks, mark tasks as compleded, edit the tasks and delete tasks. You need to have an account to use the Task Reminder.
+So user must create account by register and then have full access to the application.
+This is a Full Stack project build with the django framework.
 
-Welcome Tim Andersson,
+![alt text](assets/readme/Frist_pic.PNG)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Task Reminder - Table Content
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+* [Planning and Design](#planning-and-design)
+* [Agile methodology](#agile-methodology)
+* [Wireframes](#wireframes )
+* [Features](#features )
+* [More Features](#more-features )
+* [Libraries](#libraries )
+* [Technical Stack](#technical-stack )
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Planning and Design
 
-A blue button should appear to click: _Make Public_,
+### User storys
 
-Another blue button should appear to click: _Open Browser_.
+#### Admin 
+As a **Site Admin** I can **read, delete, update, and create tasks** so that **admin can fix problems**
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+* Be able to change the task, delete task, update task, create task.
 
-A blue button should appear to click: _Make Public_,
+#### Update or delete task 
 
-Another blue button should appear to click: _Open Browser_.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+As a **Site user** I can **Modify and delete tasks** so that **user can modify it as wanted**
 
-To log into the Heroku toolbelt CLI:
+* User can update the task.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* User can delete tasks.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
 
-### Connecting your Mongo database
+#### Registration for using Task Reminder
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+As a **Site User** I can **Start using the Task Reminder** so that **can save the tasks in the list**
 
-------
+- User can register there own account.
 
-## Release History
+- If user is logged in can use the task reminder to add task.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Own site for log in.
 
-**June 18, 2024,** Add Mongo back into template
+#### Adding task
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+As a **Site User** I can **Add tasks to the task list** so that **Be able to remember the task needed to be done**
 
-**May 28 2024:** Fix Mongo and Links installs
+- User can add task.
 
-**April 26 2024:** Update node version to 16
+- User get a response message when add task
 
-**September 20 2023:** Update Python version to 3.9.17.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Agile methodology
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Used an agile working method while working on this project. which worked, but first time apply this method on a project.
+Its a good method to use to control that all of the things that need to be in the project actually is done.
+You get to know where in the project you are.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+#### 3 steps when using.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#### To Do
+When the user story is created.
+#### In Progress
+When the user story is in progress to get done.
+#### Done
+When the user story is done.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<details>
+<summary>Project Here</summary>
+<br>
+<img src="assets/readme/taskuser_Story.PNG">
+</details>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### User story information 
+<details>
+<summary>User story information</summary>
+<br>
+<img src="assets/readme/info_user_Story.PNG">
+</details>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* With all the acceptance criterias that are needed.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Diagram Models
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<details>
+<summary>Diagram models with </summary>
+<br>
+<img src="assets/readme/new_models.PNG">
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* created with lucid.app
+</details>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Wireframes 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### display for mobile.
+<details>
+<summary>Homepage</summary>
+<br>
+<img src="assets/readme/mobile_index.PNG">
+</details>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- index.html
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<details>
+<summary>Sign in page </summary>
+<br>
+<img src="assets/readme/login_mobil.PNG">
+</details>
 
-------
+- sign in
 
-## FAQ about the uptime script
+<details>
+<summary>Account registration </summary>
+<br>
+<img src="assets/readme/registration_mobil.PNG">
+</details>
 
-**Why have you added this script?**
+- Registration 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<details>
+<summary>Contact page </summary>
+<br>
+<img src="assets/readme/contact_mobil.PNG">
+</details>
 
-**How will this affect me?**
+- contact 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<details>
+<summary>tasks </summary>
+<br>
+<img src="assets/readme/mobil_task_notopen.PNG">
+</details>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- task page 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+<details>
+<summary>Task open </summary>
+<br>
+<img src="assets/readme/mopil_open_task.PNG">
+</details>
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- task page open
 
-**Can I opt out?**
+<details>
+<summary>Add a task </summary>
+<br>
+<img src="assets/readme/added_tasks.PNG">
+</details>
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- add tasks
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Display for desktop
 
-**Anything more?**
+<details>
+<summary>Homepage</summary>
+<br>
+<img src="assets/readme/desk_index.PNG">
+</details>
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- index.html
 
----
+<details>
+<summary>Sign in page </summary>
+<br>
+<img src="assets/readme/Sign_in_desk.PNG">
+</details>
 
-Happy coding!
+- sign in 
+
+<details>
+<summary>Sign up page</summary>
+<br>
+<img src="assets/readme/creat_acc_desk.PNG">
+</details>
+
+- sign up
+
+<details>
+<summary>Contact page</summary>
+<br>
+<img src="assets/readme/contact_desk.PNG">
+</details>
+
+- contact
+
+<details>
+<summary>Add task page</summary>
+<br>
+<img src="assets/readme/add_task_desctop.PNG">
+</details>
+
+- add task
+
+<details>
+<summary>Edit task page</summary>
+<br>
+<img src="assets/readme/edit_task_desk.PNG">
+</details>
+
+- edit 
+
+<details>
+<summary>Delete page </summary>
+<br>
+<img src="assets/readme/delete_task_desk.PNG">
+</details>
+
+- delete
+
+<details>
+<summary>Open task page</summary>
+<br>
+<img src="assets/readme/open_task_desktop.PNG">
+</details>
+
+- open task
+
+<details>
+<summary>Sign out page</summary>
+<br>
+<img src="assets/readme/sign_out.PNG">
+</details>
+
+- Sign out
+
+## Features
+
+### Navigationbar 
+
+<details>
+<summary>Navigation bar desktop</summary>
+<br>
+<img src="assets/readme/navbar_desktop.PNG">
+</details>
+<details>
+<summary>Navigation bar mobil</summary>
+<br>
+<img src="assets/readme/nav_bar_mobil.PNG">
+</details>
+
+* Dropdown link to all pages if under 400px.(with icon from font awesome.)
+* The navbar contains links to contact and sign up, login, and to the homepage.
+* And changes if user is sign in to the website.(logout,contact, and home).
+* responsive.
+
+### Homepage
+
+<details>
+<summary>Homepage desktop</summary>
+<br>
+<img src="assets/readme/index_desktop.PNG">
+</details>
+<details>
+<summary>Homepage mobil</summary>
+<br>
+<img src="assets/readme/homepage_mobil.PNG">
+</details>
+
+* Homepage shows user to register account to get access to the test reminder.
+* show links to login
+* shows link to register
+* Responsive
+
+### Tasks 
+
+<details>
+<summary>tasks desktop</summary>
+<br>
+<img src="assets/readme/logged_in_desktop.PNG">
+</details>
+<details>
+<summary>tasks mobil</summary>
+<br>
+<img src="assets/readme/loged_in_user_mobil.PNG">
+</details>
+
+* Shows User where to add tasks.
+* User can open there own tasks on the open button.
+* Shows clear text where your new tasks are made.
+* Responsive site.
+
+### Edit tasks
+
+<details>
+<summary>Tasks edit desktop</summary>
+<br>
+<img src="assets/readme/edd_task_desktop.PNG">
+</details>
+<details>
+<summary>Tasks edit mobil</summary>
+<br>
+<img src="assets/readme/create_task_mobil.PNG">
+</details>
+
+* User can add title,description and even time and date for tasks.
+
+### Edit the made tasks
+
+<details>
+<summary>Tasks edit old task desktop</summary>
+<br>
+<img src="assets/readme/edit_task_desktop.PNG">
+</details>
+<details>
+<summary>Tasks edit old task mobil</summary>
+<br>
+<img src="assets/readme/edit_task_mobil.PNG">
+</details>
+
+* Here user can Edit old tasks.
+* user can choose the completed option in this edit here
+
+### Delete page 
+
+<details>
+<summary>Delete page desktop</summary>
+<br>
+<img src="assets/readme/delete_task_desktop.PNG">
+</details>
+<details>
+<summary>Delete page mobil</summary>
+<br>
+<img src="assets/readme/delete_mobil.PNG">
+</details>
+
+* User can choose to delete the task.
+* User can choose to go back to the tasks.
+
+### Sign out page 
+
+<details>
+<summary>sign out desktop</summary>
+<br>
+<img src="assets/readme/sign_out_desktop.PNG">
+</details>
+<details>
+<summary>sign out mobil</summary>
+<br>
+<img src="assets/readme/sing_out_mobil.PNG">
+</details>
+
+* User can choose the option to sign out 
+* User can go back to tasks.
+
+### Sign in page
+
+<details>
+<summary>sign in desktop</summary>
+<br>
+<img src="assets/readme/login_desktop.PNG">
+</details>
+<details>
+<summary>sign in mobil</summary>
+<br>
+<img src="assets/readme/login_mobil_app.PNG">
+</details>
+
+* User can choose the option to sign in. 
+* User can go back to register.
+
+
+### View task in list
+
+<details>
+<summary>view task desktop</summary>
+<br>
+<img src="assets/readme/view_task_desktop.PNG">
+</details>
+<details>
+<summary>view task mobil</summary>
+<br>
+<img src="assets/readme/open_task_mobil.PNG">
+</details>
+
+* Here user can see the task that needs to be done
+* Date and time.
+* and options to delete or edit.
+
+### Contact
+
+<details>
+<summary>Contact desktop</summary>
+<br>
+<img src="assets/readme/contact_desktop.PNG">
+</details>
+<details>
+<summary>Contact mobil</summary>
+<br>
+<img src="assets/readme/contact_mobil_cool.PNG">
+</details>
+
+* User can send a contect for to Task reminder.
+
+### Sign up for account
+
+<details>
+<summary>Register desktop</summary>
+<br>
+<img src="assets/readme/sign_up_desktop.PNG">
+</details>
+<details>
+<summary>Register mobil</summary>
+<br>
+<img src="assets/readme/create_acc_mobil.PNG">
+</details>
+
+* User can create account for using the task reminder.
+* or have the option to login if account already made.
+
+### Searchbar
+
+<details>
+<summary>seachbar desktop</summary>
+<br>
+<img src="assets/readme/search_bar_desktop.PNG">
+</details>
+<details>
+<summary>seachbar mobil</summary>
+<br>
+<img src="assets/readme/search_bar.PNG">
+</details>
+
+* User can search for task that exist in the list.
+* error if no task exist of that name.
+* need to fill in something in the search input.
+
+### Footer
+
+<details>
+<summary>Footer desktop</summary>
+<br>
+<img src="assets/readme/footer_desk.PNG">
+</details>
+<details>
+<summary>Footer mobil</summary>
+<br>
+<img src="assets/readme/footer_mobil.PNG">
+</details>
+
+* Footer contains copyright Task Remember
+
+
+## More Features
+
+* want to creat tasklist with categorys.
+* when completed task goes into a done category.
+
+## Libraries
+
+* asgiref: Helps Django handle tasks in the background.
+* dj-database-url: Makes it easier to set up the database.
+* Django: The framework used to build the website.
+* gunicorn: Runs the website on a server.
+* psycopg2: Connects the website to a PostgreSQL database.
+* sqlparse: Helps organize and format database queries.
+* whitenoise: Helps the website with static files.
+
+## Technical Stack
+These are the things used for this project.
+
+* Django - was used as framwork
+* HTML -  Was used for front-end.
+* CSS - Was used to style the site.
+* Bootstrap - Used to style the website.
+* Python - Made to create back-end.
+* Javascript - for interactivity
+* Gitpod - development environment
+* Git - Version control system
+* PostgreSQL - Database management system
+* lucidchar - Creating my models Diagram.
+* Heroku - deploying web applications
+
+## Testing
+
+### Lighthouse
+
+## Validation
+### W3C Testing
+### CSS jigsaw
+### jshint Javascript
+### CI Python Linter
+
+## Testing in django 
+
+## Bugs
+
+### unsolved bugs
+
+
+## Deployment
+
+### creating repository on github for project
+
+### creating heroku application
+
+### deploy to heroku 
+
+
+## Credits
+
+## Acknowledgements
+
