@@ -31,7 +31,7 @@
         <i class="fa-solid fa-pen-fancy penn-icon"></i>
     </div>
     <div class="task-add-box d-flex justify-content-center align-content-center">
-        <form method="post" class="formdetails text-center mb-3">
+        <form method="post" action="{% url 'task-create' %}" class="formdetails text-center mb-3">
             {% csrf_token %}
             <h3 class="mb-3 h3-edit">Edit your task</h3>
             {{ form.as_p }}
@@ -41,7 +41,7 @@
 </div>
 <!--Showing the task-->
 {% if allinfo %}
-</div>
+
 <h2 class="text-center mb-3">Your Task list <i class="fa-solid fa-arrow-down-long"></i></h2>
 </div>
 <div class="for-each-task mb-3">
