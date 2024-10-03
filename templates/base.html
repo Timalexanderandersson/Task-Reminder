@@ -40,7 +40,8 @@
         <i class="fa-solid fa-arrow-down-short-wide color-hover"></i>
       </a>
       <!-- Navbar after 400px -->
-      <ul class="dropdown-menu">
+      <div class="dropdown-menu">
+        <ul>
         {%if request.user.is_authenticated %}
         <li><a class="dropdown-item" href="{% url 'task-create' %}">Home</a></li>
         <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
@@ -50,9 +51,8 @@
         <li><a class="dropdown-item" href="{% url 'register' %}">Sign up</a></li>
         <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
         <li><a class="dropdown-item" href="{% url 'contact' %}">Contact</a></li>
-        
-      </ul>
       {% endif %}
+        </ul>
     </div>
   </header>
   <!-- Username -->

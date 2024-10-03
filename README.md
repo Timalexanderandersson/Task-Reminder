@@ -3,8 +3,9 @@ This is Task Reminder. It's designed to help users keeping track of important th
 user can create tasks, mark tasks as completed, edit the tasks and delete tasks. You need to have an account to use the Task Reminder.
 So user must create account by register and then have full access to the application.
 This is a Full Stack project build with the django framework.
+[Task Reminder Here](https://task-reminder-app-0c796f83bbb5.herokuapp.com/)
+![responsive](<assets/readme/Screenshot 2024-10-03 at 19.09.04.png>)
 
-![alt text](assets/readme/Frist_pic.PNG)
 
 ## Task Reminder - Table Content
 
@@ -15,6 +16,14 @@ This is a Full Stack project build with the django framework.
 * [More Features](#more-features )
 * [Libraries](#libraries )
 * [Technical Stack](#technical-stack )
+* [Testing](#testing)
+* [Validation](#validation)
+* [Testing in django](#testing-in-django)
+* [Bugs](#bugs)
+* [Deployment](#deployment)
+* [Credits](#credits)
+* [Acknowledgements](#acknowledgements)
+
 
 
 
@@ -240,7 +249,7 @@ When the user story is done.
 <img src="assets/readme/navbar_desktop.PNG">
 </details>
 <details>
-<summary>Navigation bar mobil</summary>
+<summary>Navigation bar mobile</summary>
 <br>
 <img src="assets/readme/nav_bar_mobil.PNG">
 </details>
@@ -258,7 +267,7 @@ When the user story is done.
 <img src="assets/readme/index_desktop.PNG">
 </details>
 <details>
-<summary>Homepage mobil</summary>
+<summary>Homepage mobile</summary>
 <br>
 <img src="assets/readme/homepage_mobil.PNG">
 </details>
@@ -276,7 +285,7 @@ When the user story is done.
 <img src="assets/readme/logged_in_desktop.PNG">
 </details>
 <details>
-<summary>tasks mobil</summary>
+<summary>tasks mobile</summary>
 <br>
 <img src="assets/readme/loged_in_user_mobil.PNG">
 </details>
@@ -294,7 +303,7 @@ When the user story is done.
 <img src="assets/readme/edd_task_desktop.PNG">
 </details>
 <details>
-<summary>Tasks edit mobil</summary>
+<summary>Tasks edit mobile</summary>
 <br>
 <img src="assets/readme/create_task_mobil.PNG">
 </details>
@@ -309,7 +318,7 @@ When the user story is done.
 <img src="assets/readme/edit_task_desktop.PNG">
 </details>
 <details>
-<summary>Tasks edit old task mobil</summary>
+<summary>Tasks edit old task mobile</summary>
 <br>
 <img src="assets/readme/edit_task_mobil.PNG">
 </details>
@@ -325,7 +334,7 @@ When the user story is done.
 <img src="assets/readme/delete_task_desktop.PNG">
 </details>
 <details>
-<summary>Delete page mobil</summary>
+<summary>Delete page mobile</summary>
 <br>
 <img src="assets/readme/delete_mobil.PNG">
 </details>
@@ -341,7 +350,7 @@ When the user story is done.
 <img src="assets/readme/sign_out_desktop.PNG">
 </details>
 <details>
-<summary>sign out mobil</summary>
+<summary>sign out mobile</summary>
 <br>
 <img src="assets/readme/sing_out_mobil.PNG">
 </details>
@@ -357,7 +366,7 @@ When the user story is done.
 <img src="assets/readme/login_desktop.PNG">
 </details>
 <details>
-<summary>sign in mobil</summary>
+<summary>sign in mobile</summary>
 <br>
 <img src="assets/readme/login_mobil_app.PNG">
 </details>
@@ -374,7 +383,7 @@ When the user story is done.
 <img src="assets/readme/view_task_desktop.PNG">
 </details>
 <details>
-<summary>view task mobil</summary>
+<summary>view task mobile</summary>
 <br>
 <img src="assets/readme/open_task_mobil.PNG">
 </details>
@@ -391,7 +400,7 @@ When the user story is done.
 <img src="assets/readme/contact_desktop.PNG">
 </details>
 <details>
-<summary>Contact mobil</summary>
+<summary>Contact mobile</summary>
 <br>
 <img src="assets/readme/contact_mobil_cool.PNG">
 </details>
@@ -406,7 +415,7 @@ When the user story is done.
 <img src="assets/readme/sign_up_desktop.PNG">
 </details>
 <details>
-<summary>Register mobil</summary>
+<summary>Register mobile</summary>
 <br>
 <img src="assets/readme/create_acc_mobil.PNG">
 </details>
@@ -417,12 +426,12 @@ When the user story is done.
 ### Searchbar
 
 <details>
-<summary>seachbar desktop</summary>
+<summary>searchbar desktop</summary>
 <br>
 <img src="assets/readme/search_bar_desktop.PNG">
 </details>
 <details>
-<summary>seachbar mobil</summary>
+<summary>searchbar mobile</summary>
 <br>
 <img src="assets/readme/search_bar.PNG">
 </details>
@@ -439,7 +448,7 @@ When the user story is done.
 <img src="assets/readme/footer_desk.PNG">
 </details>
 <details>
-<summary>Footer mobil</summary>
+<summary>Footer mobile</summary>
 <br>
 <img src="assets/readme/footer_mobil.PNG">
 </details>
@@ -481,8 +490,27 @@ These are the things used for this project.
 
 ### Lighthouse
 
+#### Desktop Lighthouse
+<details>
+<summary>Desktop results</summary>
+<br>
+<img src="assets/readme/desktop_ligthhouse.PNG">
+</details>
+
+#### Mobile Lighthouse
+<details>
+<summary>Mobile results</summary>
+<br>
+<img src="assets/readme/Ligthhouse_mobile.PNG">
+</details>
+
+
+
+
 ## Validation
+
 ### W3C Testing
+
 ### CSS jigsaw
 ### jshint Javascript
 ### CI Python Linter
@@ -490,20 +518,51 @@ These are the things used for this project.
 ## Testing in django 
 
 ## Bugs
+#### No bugs found.
 
 ### unsolved bugs
+#### None.
 
 
 ## Deployment
 
 ### creating repository on github for project
 
+* Sign in to GitHub then go to use https://github.com/Code-Institute-Org/ci-full-template.
+* click to "use this template" and Create a new repository.
+* create a repository with name in the Repository name
+* then create Repository 
+
 ### creating heroku application
+* Sign in to heroku.
+* In the landing page press the dropdown and click on create app.
+* give the application a name, and choose the location(Europe).
 
 ### deploy to heroku 
-
+* Go to the settings tab when clicked into your new app.
+* go to the config vars section.
+* add a key of DISABLE_COLLECTSTATIC and value of 1,so heroku dont upload staticfiles during build.
+* install gunicorn in the command.
+* install the requirements.txt.
+* Create a Procfile.
+* and put in '.herokuapp.com' to ALLOWED_HOSTS.
+* In heroku go to deploy scroll down to "Manual deploy" and press the button Deploy Branch.
 
 ## Credits
-
+### Help from these websites
+https://www.pythontutorial.net/django-tutorial/django-updateview/ 
+https://dev.to/nuh/django-loginview-and-flash-messages-4k9k
+https://www.w3schools.com/
+https://getbootstrap.com/docs/5.3/components/alerts/#examples
+https://docs.djangoproject.com/en/5.1/
+https://www.youtube.com/watch?v=WuyKxdLcw3w&t=238s
+https://stackoverflow.com/questions/1042900/django-unit-testing-with-date-time-based-objects
+https://docs.djangoproject.com/en/5.1/topics/auth/default/#django.contrib.auth.models.User
+https://medium.com/@buczynski.rafal/navigation-through-django-views-testing-907091f97638
+https://dev.to/ifihan/testing-in-django-26e5
+https://medium.com/@buczynski.rafal/navigation-through-django-views-testing-907091f97638
+https://fontawesome.com/
+https://getbootstrap.com/
+https://balsamiq.com/
 ## Acknowledgements
 
